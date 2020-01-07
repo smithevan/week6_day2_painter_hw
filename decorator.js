@@ -14,7 +14,14 @@ Decorator.prototype.addPaint = function (paint) {
 }
 
 Decorator.prototype.getLiters = function () {
-  return this.stock * 3; 
+  return this.stock * 3;
+}
+
+Decorator.prototype.enoughPaint = function(area, liters) {
+  if (area <= liters) {
+    return true;
+  }
+  return false;
 }
 
 
