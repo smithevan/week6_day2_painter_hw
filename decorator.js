@@ -17,8 +17,9 @@ Decorator.prototype.getLiters = function () {
   return this.stock * 3;
 }
 
-Decorator.prototype.enoughPaint = function(area, liters) {
+Decorator.prototype.enoughPaint = function(area, liters, room) {
   if (area <= liters) {
+    room.paintRoom();
     return true;
   }
   return false;

@@ -9,6 +9,7 @@ describe('Decorator', function () {
     decorator = new Decorator(0);
     // paint = new Paint(35);
     room = new Room(5, 7);
+    room2 = new Room (2, 2);
   })
 
   it('should check that decorator has stock', function() {
@@ -35,6 +36,18 @@ describe('Decorator', function () {
     const area = room.roomArea()
     const actual = decorator.enoughPaint(area, liters)
     assert.strictEqual(actual, false)
+  })
+  it('should change room to painted if sufficient paint', function () {
+    decorator.addPaint(3);
+    const liters = decorator.getLiters();
+    const area = room2.roomArea()
+    const paintedRoom = decorator.enoughPaint(area, liters, room2)
+    // if (paintedRoom !== false) {
+    //   room2.paintRoom;
+    // }
+    // const paintedRoom = room2.paintRoom;
+    const actual = room2.painted
+    assert.strictEqual(actual, true)
   })
 
 })
