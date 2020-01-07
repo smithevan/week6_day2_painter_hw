@@ -9,7 +9,7 @@ Room.prototype.roomArea = function () {
 }
 
 Room.prototype.paintRoom = function () {
-  return this.painted = true; 
+  return this.painted = true;
 }
 
 module.exports = Room;

@@ -1,7 +1,6 @@
 const assert = require('assert');
 const Room = require('../room.js')
-// const Decorator = require('../paint.js')
-// const Decorator = require('../decorator.js')
+
 
 describe('Room', function() {
 
