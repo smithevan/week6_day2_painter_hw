@@ -1,0 +1,24 @@
+{
+  "name": "painter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "decorator.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^7.0.0"
+  },
+  "scripts": {
+    "test": "mocha paint_specs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smithevan/week6_day2_painter_hw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smithevan/week6_day2_painter_hw/issues"
+  },
+  "homepage": "https://github.com/smithevan/week6_day2_painter_hw#readme"
+}
