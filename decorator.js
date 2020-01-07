@@ -10,7 +10,11 @@ Decorator.prototype.isEmpty = function () {
 }
 
 Decorator.prototype.addPaint = function (paint) {
-  this.stock += paint; 
+  this.stock += paint;
+}
+
+Decorator.prototype.getLiters = function () {
+  return this.stock * 3; 
 }
 
 
