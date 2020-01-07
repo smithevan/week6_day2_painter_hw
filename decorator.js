@@ -25,5 +25,11 @@ Decorator.prototype.enoughPaint = function(area, liters, room) {
   return false;
 }
 
+Decorator.prototype.decreaseStock = function(area, liters) {
+  const leftoverLiters = liters - area;
+  const leftoverStock = leftoverLiters % 3;
+  this.stock = leftoverStock;
+}
+
 
 module.exports = Decorator;

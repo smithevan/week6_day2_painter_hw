@@ -42,12 +42,17 @@ describe('Decorator', function () {
     const liters = decorator.getLiters();
     const area = room2.roomArea()
     const paintedRoom = decorator.enoughPaint(area, liters, room2)
-    // if (paintedRoom !== false) {
-    //   room2.paintRoom;
-    // }
-    // const paintedRoom = room2.paintRoom;
     const actual = room2.painted
     assert.strictEqual(actual, true)
+  });
+  it('should be able to decrease stock when painting room', function () {
+    decorator.addPaint(3);
+    const liters = decorator.getLiters();
+    const area = room2.roomArea()
+    decorator.enoughPaint(area, liters, room2)
+    decorator.decreaseStock(area, liters);
+    actual = decorator.stock;
+    assert.strictEqual(actual, 2)
   })
 
 })
